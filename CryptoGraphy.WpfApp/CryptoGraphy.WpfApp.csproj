@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Logo.png" />
+    <None Remove="LogoWhite.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
+    <PackageReference Include="Notification.Wpf" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoGraphy.Models\CryptoGraphy.Models.csproj" />
+    <ProjectReference Include="..\CryptoGraphy.Services\CryptoGraphy.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Logo.png" />
+    <Resource Include="LogoWhite.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\LogoWhite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
